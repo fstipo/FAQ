@@ -65,10 +65,14 @@ span {
   cursor: pointer;
 }
 
-p {
-  /* margin-bottom: 2rem; */
-}
-
 .answer {
   display: none;
+}
+
+.active .answer {
+  display: block;
+}
+
+.active p {
+  margin-bottom: 2rem;
 }

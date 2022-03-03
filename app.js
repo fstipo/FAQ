@@ -1,17 +1,14 @@
 const btns = document.querySelectorAll('span');
-const answer = document.querySelector('.answer');
-const p = document.querySelector('p');
+let box = document.querySelector('.box');
 
-const showAnswer = () => {
-  answer.style.display = 'flex';
-  p.style.marginBottom = '2rem';
-};
+btns.forEach((btn) => {
+  btn.addEventListener('click', (el) => {
+    const parentEl = el.target.parentNode.parentNode.parentNode;
 
-btns.forEach((el) => {
-  el.addEventListener('click', () => {
-    answer.style.display = 'flex';
-    p.style.marginBottom = '2rem';
+    parentEl.classList.toggle('active');
+    const clEl = btn.firstElementChild.getAttribute('class');
+    console.log(clEl);
+
+    // btn.removeChild(btn.firstElementChild);
   });
-  console.log(el);
-  //   btn.addEventListener('click', showAnswer);
 });
